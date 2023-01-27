@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Bakery.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace Bakery
 {
@@ -19,7 +20,7 @@ namespace Bakery
         ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"])));
 
       builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ToDoListContext>()
+                .AddEntityFrameworkStores<BakeryContext>()
                 .AddDefaultTokenProviders();
 
         WebApplication app = builder.Build();
