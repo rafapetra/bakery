@@ -18,12 +18,19 @@ namespace Bakery
         .UseMySql(builder.Configuration["ConnectionStrings:DefaultConnection"],
         ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"])));
 
+      builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ToDoListContext>()
+                .AddDefaultTokenProviders();
+
         WebApplication app = builder.Build();
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
         app.UseRouting();
+
+        app.UseAuthentication(); 
+        app.UseAuthorization();
 
         app.MapControllerRoute(
           name: "default",
