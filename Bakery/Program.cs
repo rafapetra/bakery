@@ -23,6 +23,7 @@ namespace Bakery
                 .AddEntityFrameworkStores<BakeryContext>()
                 .AddDefaultTokenProviders();
 
+
         WebApplication app = builder.Build();
 
         app.UseHttpsRedirection();
