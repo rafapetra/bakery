@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Bakery.Controllers
 {
-  [Authorize] 
+  
   public class FlavorsController : Controller
   {
     private readonly BakeryContext _db;
@@ -72,14 +72,15 @@ public ActionResult Index()
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+
+    [Authorize]
     public ActionResult AddTreat(int id)
     {
       Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
       ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "TreatName");
       return View(thisFlavor);
     }
-    
-    [Authorize]
+
     [HttpPost]
     public ActionResult AddTreat(Flavor flavor, int treatId)
     {
@@ -92,6 +93,15 @@ public ActionResult Index()
         _db.SaveChanges();
       }
       return RedirectToAction("Details", new { id = flavor.FlavorId });
+    }
+
+        [HttpPost]
+    public ActionResult DeleteJoin(int joinId)
+    {
+      TreatFlavor joinEntry = _db.TreatFlavors.FirstOrDefault(entry => entry.TreatFlavorId == joinId);
+      _db.TreatFlavors.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
     }
     }
   }

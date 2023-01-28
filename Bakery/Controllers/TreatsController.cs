@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Treats.Controllers
 {
@@ -96,7 +97,6 @@ namespace Treats.Controllers
       return RedirectToAction("Index");
     }
 
-    [Authorize]
     [HttpPost]
     public ActionResult DeleteJoin(int joinId)
     {
