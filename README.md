@@ -10,8 +10,8 @@ January 2023
 1. [Description](#description)
 2. [Technologies Used](technologies-used)
 3. [Setup Instructions](#setup-instructions)
-4. [Known Bugs] (#known-bugs)
-5. [License Information] (#license)
+4. [Known Bugs](#known-bugs)
+5. [License Information](#license)
 
 ## Description
 A program written and compiled in C# for a Bakery to store it's treats catalog, allowing the staff to combine many different pastries with different flavors. The Index displays every treat and flavor that has been added to catalog on as well as links to register and log in with an account. The user can can navigate to the Treats or Flavors pages in order to see that catalog, as well as create/edit/delete them as well. To perform CRUD actions the user must register an account and be logged in. 
@@ -72,10 +72,10 @@ $ dotnet tool install -g dotnet-script
 Open the browser to https://localhost:5001. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this lesson: Redirecting to HTTPS and Issuing a Security Certificate."
 3. Access the project by opening a browser to https://localhost:5001. If unable to access the website, it may be due to not having configured a .NET developer security certificate for HTTPS. For further information on how to do this, refer to the lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/c-and-net/basic-web-applications/redirecting-to-https-and-issuing-a-security-certificate).
 
-### Known Bugs
+## Known Bugs
 N/A - please contact if any bugs are found.
 
-### License
+## License
 MIT
 
 Copyright (c) [2023] [Rafael Petrachini]
