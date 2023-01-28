@@ -5,9 +5,7 @@
 ## Authored by:
 Rafael Petrachini<br>
 January 2023
-
-**
-
+***
 ## Table of Contents
 1. [Description](#description)
 2. [Technologies Used](technologies-used)
@@ -74,10 +72,10 @@ $ dotnet tool install -g dotnet-script
 Open the browser to https://localhost:5001. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this lesson: Redirecting to HTTPS and Issuing a Security Certificate."
 3. Access the project by opening a browser to https://localhost:5001. If unable to access the website, it may be due to not having configured a .NET developer security certificate for HTTPS. For further information on how to do this, refer to the lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/c-and-net/basic-web-applications/redirecting-to-https-and-issuing-a-security-certificate).
 
-## Known Bugs
+### Known Bugs
 N/A - please contact if any bugs are found.
 
-## License
+### License
 MIT
 
 Copyright (c) [2023] [Rafael Petrachini]
