@@ -1,0 +1,131 @@
+-- MySQL dump 10.13  Distrib 8.0.27, for macos11 (x86_64)
+--
+-- Host: localhost    Database: pierre
+-- ------------------------------------------------------
+-- Server version	8.0.27
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Dumping data for table `__EFMigrationsHistory`
+--
+
+LOCK TABLES `__EFMigrationsHistory` WRITE;
+/*!40000 ALTER TABLE `__EFMigrationsHistory` DISABLE KEYS */;
+INSERT INTO `__EFMigrationsHistory` VALUES ('20230127205339_Initial','6.0.0'),('20230127215024_AddFlavorAndTreats','6.0.0'),('20230127215507_AddFlavorAndTreat','6.0.0'),('20230127235512_AddIdentity','6.0.0');
+/*!40000 ALTER TABLE `__EFMigrationsHistory` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `AspNetRoleClaims`
+--
+
+LOCK TABLES `AspNetRoleClaims` WRITE;
+/*!40000 ALTER TABLE `AspNetRoleClaims` DISABLE KEYS */;
+/*!40000 ALTER TABLE `AspNetRoleClaims` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `AspNetRoles`
+--
+
+LOCK TABLES `AspNetRoles` WRITE;
+/*!40000 ALTER TABLE `AspNetRoles` DISABLE KEYS */;
+/*!40000 ALTER TABLE `AspNetRoles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `AspNetUserClaims`
+--
+
+LOCK TABLES `AspNetUserClaims` WRITE;
+/*!40000 ALTER TABLE `AspNetUserClaims` DISABLE KEYS */;
+/*!40000 ALTER TABLE `AspNetUserClaims` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `AspNetUserLogins`
+--
+
+LOCK TABLES `AspNetUserLogins` WRITE;
+/*!40000 ALTER TABLE `AspNetUserLogins` DISABLE KEYS */;
+/*!40000 ALTER TABLE `AspNetUserLogins` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `AspNetUserRoles`
+--
+
+LOCK TABLES `AspNetUserRoles` WRITE;
+/*!40000 ALTER TABLE `AspNetUserRoles` DISABLE KEYS */;
+/*!40000 ALTER TABLE `AspNetUserRoles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `AspNetUsers`
+--
+
+LOCK TABLES `AspNetUsers` WRITE;
+/*!40000 ALTER TABLE `AspNetUsers` DISABLE KEYS */;
+INSERT INTO `AspNetUsers` VALUES ('35a8d553-e0c6-44d2-aabe-d90804f00d6b',NULL,'0001-01-01','raffp@me.com','RAFFP@ME.COM',NULL,NULL,0,'AQAAAAEAACcQAAAAEGZY9gp4heRQCyJx8UxcAafdY6ClT/JcqBoWinnMmj2Ri5d1de/WlswX6EjEdtUmaw==','LD7XI4RFZYWGQOKR5GN36US5UX6XVKIN','72d80fa5-acfc-4331-8e6f-33792d6d76da',NULL,0,0,NULL,1,0),('7a0565d5-57ab-46dd-9582-c4e4eb38d20f',NULL,'0001-01-01','bai@email.com','BAI@EMAIL.COM',NULL,NULL,0,'AQAAAAEAACcQAAAAEDIM/m9Lf7XmSWuvdXYNG0EDI0z0X1ppoDMin0LmPg3YrQ51c6LmF2Qk3OgfeQo7cQ==','QW3QBYWJEWFOZMPGVZOS3AWD4B6P3WP6','67f06bd5-d638-410b-b853-e22636a82630',NULL,0,0,NULL,1,0);
+/*!40000 ALTER TABLE `AspNetUsers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `AspNetUserTokens`
+--
+
+LOCK TABLES `AspNetUserTokens` WRITE;
+/*!40000 ALTER TABLE `AspNetUserTokens` DISABLE KEYS */;
+/*!40000 ALTER TABLE `AspNetUserTokens` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `Flavors`
+--
+
+LOCK TABLES `Flavors` WRITE;
+/*!40000 ALTER TABLE `Flavors` DISABLE KEYS */;
+INSERT INTO `Flavors` VALUES (1,'vanilla'),(2,'chocolate');
+/*!40000 ALTER TABLE `Flavors` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `TreatFlavors`
+--
+
+LOCK TABLES `TreatFlavors` WRITE;
+/*!40000 ALTER TABLE `TreatFlavors` DISABLE KEYS */;
+INSERT INTO `TreatFlavors` VALUES (3,1,1);
+/*!40000 ALTER TABLE `TreatFlavors` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `Treats`
+--
+
+LOCK TABLES `Treats` WRITE;
+/*!40000 ALTER TABLE `Treats` DISABLE KEYS */;
+INSERT INTO `Treats` VALUES (1,'donut');
+/*!40000 ALTER TABLE `Treats` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-01-27 22:42:49
