@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Bakery.Controllers
 {
+  [Authorize] 
   public class FlavorsController : Controller
   {
     private readonly BakeryContext _db;
@@ -15,12 +17,12 @@ namespace Bakery.Controllers
     {
       _db = db;
     }
-
 public ActionResult Index()
     {
       List<Flavor> model = _db.Flavors.ToList();
       return View(model);
     }
+    [Authorize]
    public ActionResult Create()
     {
       return View();
@@ -41,20 +43,22 @@ public ActionResult Index()
       .FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
     }
-
-        public ActionResult Edit(int id)
+    [Authorize]
+    public ActionResult Edit(int id)
     {
       Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
     }
-       [HttpPost]
+    [HttpPost]
     public ActionResult Edit(Flavor flavor)
     {
       _db.Flavors.Update(flavor);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-        public ActionResult Delete(int id)
+
+    [Authorize]
+    public ActionResult Delete(int id)
     {
       Flavor thisFlavor = _db.Flavors.FirstOrDefault(flavor => flavor.FlavorId == id);
       return View(thisFlavor);
@@ -74,7 +78,8 @@ public ActionResult Index()
       ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "TreatName");
       return View(thisFlavor);
     }
-
+    
+    [Authorize]
     [HttpPost]
     public ActionResult AddTreat(Flavor flavor, int treatId)
     {

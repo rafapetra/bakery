@@ -29,7 +29,7 @@ namespace Treats.Controllers
         .FirstOrDefault(treat => treat.TreatId == id);
       return View(thisTreat);
     }
-
+    [Authorize]
     public ActionResult Create()
     {
       return View();
@@ -43,6 +43,7 @@ namespace Treats.Controllers
       return RedirectToAction("Index");
     }
 
+    [Authorize]
     public ActionResult AddFlavor(int id)
     {
       Treat thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
@@ -64,6 +65,7 @@ namespace Treats.Controllers
       return RedirectToAction("Details", new { id = treat.TreatId });
     }
 
+    [Authorize]
     public ActionResult Edit(int id)
     {
       Treat thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
@@ -78,6 +80,7 @@ namespace Treats.Controllers
       return RedirectToAction("Index");
     }
 
+    [Authorize]
     public ActionResult Delete(int id)
     {
       Treat thisTreat = _db.Treats.FirstOrDefault(treat => treat.TreatId == id);
@@ -93,6 +96,7 @@ namespace Treats.Controllers
       return RedirectToAction("Index");
     }
 
+    [Authorize]
     [HttpPost]
     public ActionResult DeleteJoin(int joinId)
     {
