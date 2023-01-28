@@ -38,13 +38,13 @@ A program written and compiled in C# for a Bakery to store it's treats catalog, 
 ```bash
 $ dotnet tool install -g dotnet-script
 ```
-4. Adjust your local environment to utilize this, further information can be located [here].(https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-dotnet-script).
-5. Next, install MySQL, more detailed instructions on how to do so can be found [here](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql). 
+4. Adjust your local environment to utilize this, further information can be located [here](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-dotnet-script).
+5. Next, install MySQL - more detailed instructions on how to do so can be found [here](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql). 
 
 ### Repository Setup
 1. Start by cloning this repository.
 2. Open your command-line interface (such as Terminal or Git Bash) and go to the production directory for this project called "Bakery".
-3. Inside the FactoryRepair folder, create a new file named appsettings.json
+3. Inside the Bakery folder, create a new file named appsettings.json
 4. Open your text editor and locate the appsettings.json file
 5. In the appsettings.json file, insert the following code:
 ```javascript
@@ -60,7 +60,7 @@ $ dotnet tool install -g dotnet-script
 1. Launch MySQL Workbench and locate the Navigator window (it should be on the left side when the screen is maximized).
 2. Choose "Data Import/Restore", this will open the Data Import page.
 3. Choose the option "Import from Self Contained File". Locate the top level of the directory of files you downloaded from this repository ("Bakery").
-4. Inside "Bakery", pick the file named quin_asselin.sql.
+4. Inside "Bakery", pick the file named bakery.sql.
 5. Under "Default Schema to be Imported To", press the "New..." button, enter the database name (pierre.sql), and press "OK".
 6. Press the "Start Import" button in the lower right corner of the Data Import Pane.
 7. In the Navigator panel, select the "Schemas" tab. Click the "refresh" icon (two arrows arranged in a circle in the top right corner of the pane), and the database should appear."
